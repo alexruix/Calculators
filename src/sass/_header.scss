@@ -1,0 +1,12 @@
+@use 'variables';
+
+.nav {
+    background-color: variables.$background;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+
+    &-contain{
+        display: flex;
+        gap: 1rem;
+    }
+}

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <link rel="stylesheet" href="src/css/normalize.css" />
+    <script
+      src="https://kit.fontawesome.com/a6083f8adb.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Geometryx - Calculators</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav-contain">
+        <a href="">
+          <img
+            src="src/img/profileWhite.png"
+            alt="Avatar Image"
+            class="img avatar"
+          />
+          <span class="avatar-span">@alexruix</span>
+        </a>
+      </div>
+      <a href="index.html" lass="link"><h1 class="title">Geometryx</h1></a>
+      <div class="nav-contain">
+        <a href="" class="btn-icon">
+          <i class="btn-icon-svg fa-brands fa-linkedin-in"></i>
+          <!-- <span class="btn-span">Linkedin</span> -->
+        </a>
+        <a href="" class="btn-icon">
+          <i class="btn-icon-svg fa-brands fa-behance"></i>
+          <!-- <span class="btn-span">Portfolio</span> -->
+        </a>
+      </div>
+    </nav>
+    <div class="layout">
+      <header class="header">
+        <div class="card card-header">
+          <img
+            src="src/img/circle.png"
+            alt="area and perimeter"
+            class="card-img"
+          />
+          <div class="card-contain">
+            <h2 class="card-title">Area y perímetro</h2>
+            <p class="card-text">
+              Calculadora para figuras geometricas simples: cuadrado,
+              rectángulo, círculo y triangulo.
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="grid">
+
+            <!-- Square -->
+            <div class="card card-inputs">
+                <div class="result-container">
+                  <div>
+                    <img
+                      src="src/img/square.png"
+                      alt="Square"
+                      class="img card-img"
+                    />
+                  </div>
+                  <div class="result-container-text">
+                    <!-- <span class="card-text">Resultado:</span> -->
+                    <div class="result-text card-text">
+                      <span>Perímetro:</span>
+                      <strong id="squarePerimeter-result"></strong>
+                      <br />
+                      <span>Área:</span>
+                      <strong id="squareArea-result"></strong>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-contain">
+                  <h2 class="card-title">Cuadrado</h2>
+    
+                  <form class="form" id="square">
+                    <div class="input-container">
+                      <label class="label" for="side"
+                        >Ingresa <strong>Lado</strong> en cm:</label
+                      >
+                      <input
+                        name="side"
+                        id="side"
+                        class="input"
+                        type="number"
+                        min="0"
+                        placeholder="0"
+                      />
+                    </div>                
+    
+                    <button type="submit" class="btn" id="calcS">Calcular</button>
+                    <button type="button" class="btn btn-delete" id="deleteS">Borrar</button>
+                  </form>
+                </div>
+            </div>
+
+            <!-- Circle -->
+            <div class="card card-inputs">
+                <div class="result-container">
+                  <div>
+                    <img
+                      src="src/img/circle.png"
+                      alt="circle"
+                      class="img card-img"
+                    />
+                  </div>
+                  <div class="result-container-text">
+                    <!-- <span class="card-text">Resultado:</span> -->
+                    <div class="result-text card-text">
+                      <span>Perímetro:</span>
+                      <strong id="circlePerimeter-result"></strong>
+                      <br />
+                      <span>Área:</span>
+                      <strong id="circleArea-result"></strong>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-contain">
+                  <h2 class="card-title">Círculo</h2>
+    
+                  <form class="form" id="circle">
+                    <div class="input-container">
+                      <label class="label" for="radius"
+                        >Ingresa <strong>Radio</strong> en cm:</label
+                      >
+                      <input
+                        name="radius"
+                        id="radius"
+                        class="input"
+                        type="number"
+                        min="0"
+                        placeholder="0"
+                      />
+                    </div>
+                    
+    
+                    <button type="submit" class="btn" id="calcC">Calcular</button>
+                    <button type="button" class="btn btn-delete" id="deleteC">Borrar</button>
+                  </form>
+                </div>
+              </div> 
+
+              <!-- Triangle isosceles -->
+            <div class="card card-inputs">
+                <div class="result-container">
+                  <div>
+                    <img
+                      src="src/img/triangle.png"
+                      alt="triangle"
+                      class="img card-img"
+                    />
+                  </div>
+                  <div class="result-container-text">
+                    <!-- <span class="card-text">Resultado:</span> -->
+                    <div class="result-text card-text">
+                      <span>Perímetro:</span>
+                      <strong id="perimeterTi-result"></strong>
+                      <br />
+                      <span>Área:</span>
+                      <strong id="areaTi-result"></strong>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-contain">
+                  <h2 class="card-title">Triángulo</h2>
+    
+                  <form class="form" id="triangle">
+                    
+                    
+                    <div class="input-container">
+                      <label class="label" for="baseTi"
+                        >Ingresa <strong>Base</strong> en cm:</label
+                      >
+                      <input
+                        name="baseTi"
+                        id="baseTi"
+                        class="input"
+                        type="number"
+                        min="0"
+                        placeholder="0"
+                      />
+                      <span class="error" id="error-baseTi">Ingrese un valor válido</span>
+                    </div>
+
+                    <div class="input-container">
+                        <label class="label" for="sideATi"
+                          >Ingresa <strong>Lado A</strong> en cm:</label
+                        >
+                        <input
+                          name="sideATi"
+                          id="sideATi"
+                          class="input"
+                          type="number"
+                          min="0"
+                          placeholder="0"
+                        />
+                        <span class="error" id="error-sideATi">Ingrese un valor válido</span>
+                      </div>
+
+                      <div class="input-container">
+                        <label class="label" for="sideBTi"
+                          >Ingresa <strong>Lado B</strong> en cm:</label
+                        >
+                        <input
+                          name="sideBTi"
+                          id="sideBTi"
+                          class="input"
+                          type="number"
+                          min="0"
+                          placeholder="0"
+                        />
+                        <span class="error" id="error-sideBTi">Ingrese un valor válido</span>
+                      </div>
+
+                    <div class="input-container">
+                      <label class="label" for="heightTi"
+                        >Ingresa <strong>Altura</strong> en cm:</label
+                      >
+                      <input
+                        name="heightTi"
+                        id="heightTi"
+                        class="input"
+                        type="number"
+                        min="0"
+                        placeholder="0"
+                      />
+                        <span class="error" id="error-heightTi">Ingrese un valor válido</span>
+                    </div>
+    
+                    <button type="submit" class="btn" id="calcT">Calcular</button>
+                    <button type="button" class="btn btn-delete" id="deleteT">Borrar</button>
+                  </form>
+                </div>
+              </div>
+
+                <!-- Triangle equilateral 
+              <div class="card card-inputs">
+                <div class="result-container">
+                  <div>
+                    <img
+                      src= 'src/img/equilater.png'
+                      alt="triangle equilateral"
+                      class="img card-img"
+                    />
+                  </div>
+                  <div class="result-container-text">
+                    <span class="card-text">Resultado:</span> 
+                    <div class="result-text card-text">
+                      <span>Perímetro:</span>
+                      <strong id="perimeterTe-result"></strong>
+                      <br />
+                      <span>Área:</span>
+                      <strong id="areaTe-result"></strong>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-contain">
+                  <h2 class="card-title">Triángulo Equilátero</h2>
+    
+                  <form class="form" id="trianglesE">
+                    
+                    
+                    
+                    <div class="input-container">
+                        <label class="label" for="baseTe"
+                          >Ingresa <strong>Uno de sus lados</strong> en cm:</label
+                        >
+                        <input
+                          name="baseTe"
+                          id="baseTe"
+                          class="input"
+                          type="number"
+                          min="0"
+                          placeholder="0"
+                        />
+                      </div>
+                      
+                    <div class="input-container">
+                      <label class="label" for="heightTe"
+                        >Ingresa <strong>Altura</strong> en cm:</label
+                      >
+                      <input
+                        name="heightTe"
+                        id="heightTe"
+                        class="input"
+                        type="number"
+                        min="0"
+                        placeholder="0"
+                      />
+                    </div>
+    
+                    <button type="submit" class="btn" id="calcTe">Calcular</button>
+                    <button type="button" class="btn btn-delete" id="deleteTe">Borrar</button>
+                  </form>
+                </div>
+              </div> -->
+
+               <!-- Triangle escaleno 
+               <div class="card card-inputs">
+                <div class="result-container">
+                  <div>
+                    <img
+                      src= 'src/img/escaleno.png'
+                      alt="triangle escaleno"
+                      class="img card-img"
+                    />
+                  </div>
+                  <div class="result-container-text">
+                    <div class="result-text card-text">
+                      <span>Perímetro:</span>
+                      <strong id="perimeterTe-result"></strong>
+                      <br />
+                      <span>Área:</span>
+                      <strong id="areaTe-result"></strong>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-contain">
+                  <h2 class="card-title">Triángulo Escaleno</h2>
+    
+                  <form class="form" id="trianglesEs">
+                    
+                    
+                    
+                    <div class="input-container">
+                        <label class="label" for="sideATes"
+                          >Ingresa <strong>Lado A</strong> en cm:</label
+                        >
+                        <input
+                          name="sideATes"
+                          id="sideATes"
+                          class="input"
+                          type="number"
+                          min="0"
+                          placeholder="0"
+                        />
+                      </div>
+
+                      <div class="input-container">
+                        <label class="label" for="sideBTes"
+                          >Ingresa <strong>LadoB</strong> en cm:</label
+                        >
+                        <input
+                          name="sideBTes"
+                          id="sideBTes"
+                          class="input"
+                          type="number"
+                          min="0"
+                          placeholder="0"
+                        />
+                      </div>
+
+                      <div class="input-container">
+                        <label class="label" for="sideCTes"
+                          >Ingresa <strong>Lado C</strong> en cm:</label
+                        >
+                        <input
+                          name="sideCTes"
+                          id="sideCTes"
+                          class="input"
+                          type="number"
+                          min="0"
+                          placeholder="0"
+                        />
+                      </div>
+                      
+                    <div class="input-container">
+                      <label class="label" for="heightTes"
+                        >Ingresa <strong>Altura</strong> en cm:</label
+                      >
+                      <input
+                        name="heightTes"
+                        id="heightTes"
+                        class="input"
+                        type="number"
+                        min="0"
+                        placeholder="0"
+                      />
+                    </div>
+    
+                    <button type="submit" class="btn" id="calcTes">Calcular</button>
+                    <button type="button" class="btn btn-delete" id="deleteTes">Borrar</button>
+                  </form>
+                </div>
+              </div>
+            -->
+              
+            <!-- Rectangle -->
+            <div class="card card-inputs">
+                <div class="result-container">
+                  <div>
+                    <img
+                      src="src/img/rect.png"
+                      alt="area and perimeter"
+                      class="img card-img"
+                    />
+                  </div>
+                  <div class="result-container-text">
+                    <!-- <span class="card-text">Resultado:</span> -->
+                    <div class="result-text">
+                      <span class="card-text">Perímetro:</span>
+                      <strong class="card-text" id="rectanglePerimeter-result"></strong>
+                      <br />
+                      <span class="card-text">Área:</span>
+                      <strong class="card-text" id="rectangleArea-result"></strong>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-contain">
+                  <h2 class="card-title">Rectángulo</h2>
+    
+                  <form class="form" id="rectangle">
+                    <div class="input-container">
+                      <label class="label"
+                        >Ingresa <strong>Lado A</strong> en cm:</label
+                      >
+                      <input
+                        name="sideA"
+                        id="sideA"
+                        class="input"
+                        type="number"
+                        min="0"
+                        placeholder="0"
+                      />
+                      <span class="error" id="error-sideA">Ingrese un valor válido</span>
+                    </div>
+                    <div class="input-container">
+                      <label class="label"
+                        >Ingresa <strong>Lado B</strong> en cm:</label
+                      >
+                      <input
+                        name="sideB"
+                        id="sideB"
+                        class="input"
+                        type="number"
+                        min="0"
+                        placeholder="0"
+                      />
+                        <span class="error" id="error-sideB">Ingrese un valor válido</span>
+                    </div>                
+    
+                    <button type="submit" class="btn" id="calcR">Calcular</button>
+                    <button type="button" class="btn btn-delete" id="deleteR">Borrar</button>
+                  </form>
+                </div>
+              </div>
+
+                      
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="src/js/taller1.js"></script>
+  </body>
+</html>
