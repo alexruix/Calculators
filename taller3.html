@@ -156,24 +156,19 @@
               </div>
               <div class="result-container-text">
                 <div class="result-text">
-                  <span class="card-text">Media arimética:</span>
+                  <span class="card-text">Resultado:</span>
                   <strong class="card-text" id="resultMediaAritmetica"></strong>
                 </div>
               </div>
-              <b class="card-text">Lista de valores:</b>
-              <ol class="card-text" id="listNumberMa">
-                <span class="emptylist" id="listEmptyMa"
-                  >La lista está vacia</span
-                >
-              </ol>
+              
             </div>
             <div class="card-contain">
-              <h2 class="card-title">Media Arimética</h2>
+              <h2 class="card-title">Calculadora</h2>
 
               <form class="form" id="mediaAritmetica">
                 <div class="input-container">
                   <label class="label"
-                    >Ingresa un <strong>Nuevo Valor</strong> a la lista:</label
+                    >Ingresa <strong>Valores</strong> usando coma</label
                   >
                   <input
                     name="newValueMa"
@@ -181,128 +176,41 @@
                     class="input"
                     type="number"
                     min="0"
-                    placeholder="0"
+                    placeholder="0, 0, 0"
                   />
                   <span class="error" id="error-newValueMa"
                     >Ingrese un valor mayor a 0</span
                   >
                 </div>
 
-                <button type="submit" class="btn" id="calcMediaAritmetica">
-                  Calcular
+                <button type="button" class="btn" id="calcMediaAritmetica">
+                  Calcular media artimética
                 </button>
+
+                <button type="button" class="btn" id="calcMediaGeometrica">
+                    Calcular geométrica
+                  </button>
+
+                  <button type="button" class="btn" id="calcMediana">
+                    Calcular mediana
+                  </button>
+
+                  <button type="button" class="btn" id="calcModa">
+                    Calcular moda
+                  </button>
+  
                 <button
                   type="button"
                   class="btn btn-delete"
-                  id="deleteMediaAritmetica"
+                  id="delete"
                 >
                   Borrar
                 </button>
               </form>
             </div>
-          </div>
+          </div>          
 
-          <div class="card card-inputs">
-            <div class="result-container">
-              <div>
-                <img
-                  src="src/img/discount.png"
-                  alt="media, moda y mediana"
-                  class="img card-img"
-                />
-              </div>
-              <div class="result-container-text">
-                <div class="result-text">
-                  <span class="card-text">Media geométrica:</span>
-                  <strong class="card-text" id="resultMediaGeometrica"></strong>
-                </div>
-              </div>
-              <b class="card-text">Lista de valores:</b>
-              <ol class="card-text">
-                <span class="emptylist" id="listMediaGeometrica"
-                  >La lista está vacia</span
-                >
-              </ol>
-            </div>
-            <div class="card-contain">
-              <h2 class="card-title">Media Geométrica</h2>
-
-              <form class="form" id="mediaGeometrica">
-                <div class="input-container">
-                  <label class="label"
-                    >Ingresa un <strong>Nuevo Valor</strong> a la lista:</label
-                  >
-                  <input
-                    name="newValueMg"
-                    id="newValueMg"
-                    class="input"
-                    type="number"
-                    min="0"
-                    placeholder="0"
-                  />
-                  <span class="error" id="error-newValueMg"
-                    >Ingrese un valor mayor a 0</span
-                  >
-                </div>
-
-                <button type="submit" class="btn" id="calcMg">Calcular</button>
-                <button type="button" class="btn btn-delete" id="deleteMg">
-                  Borrar
-                </button>
-              </form>
-            </div>
-          </div>
-
-          <div class="card card-inputs">
-            <div class="result-container">
-              <div>
-                <img
-                  src="src/img/discount.png"
-                  alt="media, moda y mediana"
-                  class="img card-img"
-                />
-              </div>
-              <div class="result-container-text">
-                <div class="result-text">
-                  <span class="card-text">Moda:</span>
-                  <strong class="card-text" id="resultModa"></strong>
-                </div>
-              </div>
-              <b class="card-text">Lista de valores:</b>
-              <ol class="card-text">
-                <span class="emptylist" id="listModa">La lista está vacia</span>
-              </ol>
-            </div>
-            <div class="card-contain">
-              <h2 class="card-title">Moda</h2>
-
-              <form class="form" id="moda">
-                <div class="input-container">
-                  <label class="label"
-                    >Ingresa un <strong>Nuevo Valor</strong> a la lista:</label
-                  >
-                  <input
-                    name="newValueModa"
-                    id="newValueModa"
-                    class="input"
-                    type="number"
-                    min="0"
-                    placeholder="0"
-                  />
-                  <span class="error" id="error-newValueModa"
-                    >Ingrese un valor mayor a 0</span
-                  >
-                </div>
-
-                <button type="submit" class="btn" id="calcModa">
-                  Calcular
-                </button>
-                <button type="button" class="btn btn-delete" id="deleteModa">
-                  Borrar
-                </button>
-              </form>
-            </div>
-          </div>
+          
         </div>
       </main>
     </div>
