@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="src/css/styles.css" />
+    <link rel="stylesheet" href="src/css/styles.min.css" />
     <link rel="stylesheet" href="src/css/normalize.css" />
     <script
       src="https://kit.fontawesome.com/a6083f8adb.js"
@@ -19,16 +19,15 @@
     <title>Geometryx - Calculators Platzi 'Curso Práctico de JavaScript'</title>
   </head>
   <body>
-
     <nav class="nav">
         <div class="nav-contain">
-          <a href="">
+          <a class="nav-avatar" href="https://alexruix.netlify.app/">
             <img
               src="src/img/profileWhite.png"
               alt="Avatar Image"
               class="avatar img"
             />
-            <span class="avatar-span">@alexruix</span>
+            <span class="avatar-span">Alex Ruiz</span>
           </a>
         </div>
         <a href="index.html" lass="link">
@@ -45,140 +44,271 @@
           </a>
         </div>
       </nav>
-      <div class="layout">
-        <header class="header">
-          <div class="card card-header platzi">
-            <img src="src/img/js-challenge-logo.png" alt="" class="card-img" />
+    <div class="layout">
+      <header class="header">
+        <div class="header-slider">
+          <div class="card card-header taller1">
+            <img src="src/img/circle.png" alt="" class="card-img" />
             <div class="card-contain">
-              <h2 class="card-title">Curso Práctico de JavaScript - Platzi</h2>
+              <h2 class="card-title">Área y perímetro</h2>
+              <p class="card-text">
+                Calculadora de área y perímetro de figuras geométricas
+              </p>
               <span class="card-text">
-                Este sitio web fue creado en base al curso práctico de JavaScript
-                de Platzi.
-                <br />
-                <b>Temas vistos en el curso:</b>
-                <ul class="card-text">
-                  <li>
-                    <span> Manipulación del DOM </span>
-                  </li>
-  
-                  <li>
-                    <span> Manipulación de Array </span>
-                  </li>
-  
-                  <li>
-                    <span> Functions </span>
-                  </li>
-  
-                  <li>
-                    <span> HTML y CSS </span>
-                  </li>
-  
-                  <li>
-                    <span> Animaciones y transiciones </span>
-                  </li>
-                </ul>
+                <b> Figuras geometricas disponibles:</b>
               </span>
+              <ul class="card-text">
+                <li>
+                  <span> Cuadrado </span>
+                </li>
+
+                <li>
+                  <span> Círculo </span>
+                </li>
+
+                <li>
+                  <span> Triángulo </span>
+                </li>
+
+                <li>
+                  <span> Rectángulo </span>
+                </li>
+              </ul>
             </div>
           </div>
-        </header>
-  
-        <main>
-          <h2 class="title">Calculadora</h2>
-          
-          <div class="grid">            
-  
-            <div class="card card-inputs">
-                <div class="result-container">
-                  <div>
-                    <img
-                      src="src/img/price.png"
-                      alt="price and discount"
-                      class="img card-img"
-                    />
-                </div>
-                <div class="result-container-text">
-                    <div class="result-text">
-                      <span class="card-text">Precio final:</span>
-                      <strong class="card-text" id="resultPrice"></strong>
-                    </div>
-                  </div>
 
-                  
+          <div class="card card-header taller2">
+            <img src="src/img/price.png" alt="" class="card-img" />
+            <div class="card-contain">
+              <h2 class="card-title">Precios y descuentos</h2>
+              <p class="card-text">
+                Calculadora de precios y descuentos. <br />
+                Permite calcular el precio final de un producto agregando
+                cupones y descuentos.
+              </p>
               <span class="card-text">
-                <b>
-                    Cupones disponibles:
-                </b>
-                <ul>
-                  <li>Cupon1</li>
-                  <li>Cupon2</li>
-                  <li>Cupon3</li>
-                  <li>Cupon4</li>
-                </ul>
+                <b>Opciones disponibles:</b>
               </span>
+              <ul class="card-text">
+                <li>Cupones predefinidos</li>
 
-                  
-                  
-                </div>
-                <div class="card-contain">
-                  <h2 class="card-title">Porcentajes y descuentos en precios</h2>
-    
-                  <form class="form" id="form">
-                    <div class="input-container">
-                      <label class="label"
-                        >Ingresa el <strong>Precio</strong> de tu producto:</label
-                      >
-                      <input
-                        name="price"
-                        id="price"
-                        class="input"
-                        type="number"
-                        min="0"
-                        placeholder="0"
-                      />
-                      <span class="error" id="error-price">Ingrese un valor mayor a 0</span>
-                    </div>
-                    <div class="input-container">
-                      <label class="label"
-                      >Ingresa el porcentaje del <strong>Descuento</strong> de tu producto:</label
-                      >
-                      <input
-                        name="discount"
-                        id="discount"
-                        class="input"
-                        type="number"
-                        min="0"
-                        placeholder="0"
-                      />
-                        <span class="error" id="error-discount">Ingrese un valor mayor a 0</span>
-                    </div> 
-                    
-                    <div class="input-container">
-                        <label class="label"
-                        >Ingresa un <strong>Cupón</strong> si lo desea:</label
-                        >
-                        <input
-                          name="coupon"
-                          id="coupon"
-                          class="input"
-                          type="text"
-                          placeholder="Sin cupón"
-                        />
-                          <span class="error" id="error-coupon">El cupón no es válido</span>
-                      </div>
-    
-                    <button type="submit" class="btn" id="calcPrice">Calcular</button>
-                    <button type="button" class="btn btn-delete" id="deletePrice">Borrar</button>
-                  </form>
-                </div>
-              </div>
-  
-              
-              </div>
+                <li>Descuentos en porcentajes</li>
+              </ul>
             </div>
           </div>
-        </main>
-      </div>
 
-      <script src="src/js/taller3.js"></script>
+          <div class="card card-header taller3">
+            <img src="src/img/discount.png" alt="" class="card-img" />
+            <div class="card-contain">
+              <h2 class="card-title">Promedios, moda y mediana</h2>
+              <p class="card-text">Calculadora de promedios, moda y mediana</p>
+              <span class="card-text">
+                <b> Calculos disponibles:</b>
+              </span>
+              <ul class="card-text">
+                <li>Media artimética</li>
+
+                <li>Media geométrica</li>
+
+                <li>Moda</li>
+
+                <li>Mediana</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card card-header taller4">
+            <img src="src/img/dollar.png" alt="" class="card-img" />
+            <div class="card-contain">
+              <h2 class="card-title">Análisis de mediana salarial</h2>
+              <p class="card-text">
+                Esta calculadora te permite conocer la mediana salarial y el top 10 de salarios              </p>
+              <span class="card-text">
+                <b> Cálculos disponibles:</b>
+              </span>
+              <ul class="card-text">
+                <li>
+                   Mediana salarial
+                </li>
+
+                <li>
+                 Mediana del top 10
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <h2 class="title">Media, Moda y Mediana en números enteros</h2>
+
+        <div class="grid">
+          <div class="card card-inputs">
+            <div class="result-container">
+              <div>
+                <img
+                  src="src/img/discount.png"
+                  alt="media, moda y mediana"
+                  class="img card-img"
+                />
+              </div>
+              <div class="result-container-text">
+                <div class="result-text">
+                  <span class="card-text">Media arimética:</span>
+                  <strong class="card-text" id="resultMediaAritmetica"></strong>
+                </div>
+              </div>
+              <b class="card-text">Lista de valores:</b>
+              <ol class="card-text" id="listNumberMa">
+                <span class="emptylist" id="listEmptyMa"
+                  >La lista está vacia</span
+                >
+              </ol>
+            </div>
+            <div class="card-contain">
+              <h2 class="card-title">Media Arimética</h2>
+
+              <form class="form" id="mediaAritmetica">
+                <div class="input-container">
+                  <label class="label"
+                    >Ingresa un <strong>Nuevo Valor</strong> a la lista:</label
+                  >
+                  <input
+                    name="newValueMa"
+                    id="newValueMa"
+                    class="input"
+                    type="number"
+                    min="0"
+                    placeholder="0"
+                  />
+                  <span class="error" id="error-newValueMa"
+                    >Ingrese un valor mayor a 0</span
+                  >
+                </div>
+
+                <button type="submit" class="btn" id="calcMediaAritmetica">
+                  Calcular
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-delete"
+                  id="deleteMediaAritmetica"
+                >
+                  Borrar
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="card card-inputs">
+            <div class="result-container">
+              <div>
+                <img
+                  src="src/img/discount.png"
+                  alt="media, moda y mediana"
+                  class="img card-img"
+                />
+              </div>
+              <div class="result-container-text">
+                <div class="result-text">
+                  <span class="card-text">Media geométrica:</span>
+                  <strong class="card-text" id="resultMediaGeometrica"></strong>
+                </div>
+              </div>
+              <b class="card-text">Lista de valores:</b>
+              <ol class="card-text">
+                <span class="emptylist" id="listMediaGeometrica"
+                  >La lista está vacia</span
+                >
+              </ol>
+            </div>
+            <div class="card-contain">
+              <h2 class="card-title">Media Geométrica</h2>
+
+              <form class="form" id="mediaGeometrica">
+                <div class="input-container">
+                  <label class="label"
+                    >Ingresa un <strong>Nuevo Valor</strong> a la lista:</label
+                  >
+                  <input
+                    name="newValueMg"
+                    id="newValueMg"
+                    class="input"
+                    type="number"
+                    min="0"
+                    placeholder="0"
+                  />
+                  <span class="error" id="error-newValueMg"
+                    >Ingrese un valor mayor a 0</span
+                  >
+                </div>
+
+                <button type="submit" class="btn" id="calcMg">Calcular</button>
+                <button type="button" class="btn btn-delete" id="deleteMg">
+                  Borrar
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="card card-inputs">
+            <div class="result-container">
+              <div>
+                <img
+                  src="src/img/discount.png"
+                  alt="media, moda y mediana"
+                  class="img card-img"
+                />
+              </div>
+              <div class="result-container-text">
+                <div class="result-text">
+                  <span class="card-text">Moda:</span>
+                  <strong class="card-text" id="resultModa"></strong>
+                </div>
+              </div>
+              <b class="card-text">Lista de valores:</b>
+              <ol class="card-text">
+                <span class="emptylist" id="listModa">La lista está vacia</span>
+              </ol>
+            </div>
+            <div class="card-contain">
+              <h2 class="card-title">Moda</h2>
+
+              <form class="form" id="moda">
+                <div class="input-container">
+                  <label class="label"
+                    >Ingresa un <strong>Nuevo Valor</strong> a la lista:</label
+                  >
+                  <input
+                    name="newValueModa"
+                    id="newValueModa"
+                    class="input"
+                    type="number"
+                    min="0"
+                    placeholder="0"
+                  />
+                  <span class="error" id="error-newValueModa"
+                    >Ingrese un valor mayor a 0</span
+                  >
+                </div>
+
+                <button type="submit" class="btn" id="calcModa">
+                  Calcular
+                </button>
+                <button type="button" class="btn btn-delete" id="deleteModa">
+                  Borrar
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="src/js/taller3.js"></script>
+    <script src="src/js/index.js"></script>
+    <script src="src/js/location.js"></script>
   </body>
 </html>
