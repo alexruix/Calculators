@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <link rel="stylesheet" href="src/css/normalize.css" />
+    <script
+      src="https://kit.fontawesome.com/a6083f8adb.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Geometryx - Calculators Platzi 'Curso Práctico de JavaScript'</title>
+  </head>
+  <body>
+
+    <nav class="nav">
+        <div class="nav-contain">
+          <a href="">
+            <img
+              src="src/img/profileWhite.png"
+              alt="Avatar Image"
+              class="avatar img"
+            />
+            <span class="avatar-span">@alexruix</span>
+          </a>
+        </div>
+        <a href="index.html" lass="link">
+          <h1 class="title title-link">Geometryx</h1>
+        </a>
+        <div class="nav-contain">
+          <a href="https://www.linkedin.com/in/alexruix/" class="btn-icon">
+            <i class="btn-icon-svg fa-brands fa-linkedin-in"></i>
+            <!-- <span class="btn-span">Linkedin</span> -->
+          </a>
+          <a href="https://github.com/alexruix" class="btn-icon">
+            <i class="btn-icon-svg fa-brands fa-github"></i>
+            <!-- <span class="btn-span">Portfolio</span> -->
+          </a>
+        </div>
+      </nav>
+      <div class="layout">
+        <header class="header">
+          <div class="card card-header platzi">
+            <img src="src/img/js-challenge-logo.png" alt="" class="card-img" />
+            <div class="card-contain">
+              <h2 class="card-title">Curso Práctico de JavaScript - Platzi</h2>
+              <span class="card-text">
+                Este sitio web fue creado en base al curso práctico de JavaScript
+                de Platzi.
+                <br />
+                <b>Temas vistos en el curso:</b>
+                <ul class="card-text">
+                  <li>
+                    <span> Manipulación del DOM </span>
+                  </li>
+  
+                  <li>
+                    <span> Manipulación de Array </span>
+                  </li>
+  
+                  <li>
+                    <span> Functions </span>
+                  </li>
+  
+                  <li>
+                    <span> HTML y CSS </span>
+                  </li>
+  
+                  <li>
+                    <span> Animaciones y transiciones </span>
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </header>
+  
+        <main>
+          <h2 class="title">Calculadora</h2>
+          
+          <div class="grid">            
+  
+            <div class="card card-inputs">
+                <div class="result-container">
+                  <div>
+                    <img
+                      src="src/img/price.png"
+                      alt="price and discount"
+                      class="img card-img"
+                    />
+                </div>
+                <div class="result-container-text">
+                    <div class="result-text">
+                      <span class="card-text">Precio final:</span>
+                      <strong class="card-text" id="resultPrice"></strong>
+                    </div>
+                  </div>
+
+                  
+              <span class="card-text">
+                <b>
+                    Cupones disponibles:
+                </b>
+                <ul>
+                  <li>Cupon1</li>
+                  <li>Cupon2</li>
+                  <li>Cupon3</li>
+                  <li>Cupon4</li>
+                </ul>
+              </span>
+
+                  
+                  
+                </div>
+                <div class="card-contain">
+                  <h2 class="card-title">Porcentajes y descuentos en precios</h2>
+    
+                  <form class="form" id="form">
+                    <div class="input-container">
+                      <label class="label"
+                        >Ingresa el <strong>Precio</strong> de tu producto:</label
+                      >
+                      <input
+                        name="price"
+                        id="price"
+                        class="input"
+                        type="number"
+                        min="0"
+                        placeholder="0"
+                      />
+                      <span class="error" id="error-price">Ingrese un valor mayor a 0</span>
+                    </div>
+                    <div class="input-container">
+                      <label class="label"
+                      >Ingresa el porcentaje del <strong>Descuento</strong> de tu producto:</label
+                      >
+                      <input
+                        name="discount"
+                        id="discount"
+                        class="input"
+                        type="number"
+                        min="0"
+                        placeholder="0"
+                      />
+                        <span class="error" id="error-discount">Ingrese un valor mayor a 0</span>
+                    </div> 
+                    
+                    <div class="input-container">
+                        <label class="label"
+                        >Ingresa un <strong>Cupón</strong> si lo desea:</label
+                        >
+                        <input
+                          name="coupon"
+                          id="coupon"
+                          class="input"
+                          type="text"
+                          placeholder="Sin cupón"
+                        />
+                          <span class="error" id="error-coupon">El cupón no es válido</span>
+                      </div>
+    
+                    <button type="submit" class="btn" id="calcPrice">Calcular</button>
+                    <button type="button" class="btn btn-delete" id="deletePrice">Borrar</button>
+                  </form>
+                </div>
+              </div>
+  
+              
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <script src="src/js/taller3.js"></script>
+  </body>
+</html>

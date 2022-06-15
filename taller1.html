@@ -44,18 +44,37 @@
     </nav>
     <div class="layout">
       <header class="header">
-        <div class="card card-header">
-          <img
-            src="src/img/circle.png"
-            alt="area and perimeter"
-            class="card-img"
-          />
+        <div class="card card-header platzi">
+          <img src="src/img/js-challenge-logo.png" alt="" class="card-img" />
           <div class="card-contain">
-            <h2 class="card-title">Area y perímetro</h2>
-            <p class="card-text">
-              Calculadora para figuras geometricas simples: cuadrado,
-              rectángulo, círculo y triangulo.
-            </p>
+            <h2 class="card-title">Curso Práctico de JavaScript - Platzi</h2>
+            <span class="card-text">
+              Este sitio web fue creado en base al curso práctico de JavaScript
+              de Platzi.
+              <br />
+              <b>Temas vistos en el curso:</b>
+              <ul class="card-text">
+                <li>
+                  <span> Manipulación del DOM </span>
+                </li>
+
+                <li>
+                  <span> Manipulación de Array </span>
+                </li>
+
+                <li>
+                  <span> Functions </span>
+                </li>
+
+                <li>
+                  <span> HTML y CSS </span>
+                </li>
+
+                <li>
+                  <span> Animaciones y transiciones </span>
+                </li>
+              </ul>
+            </span>
           </div>
         </div>
       </header>
@@ -100,6 +119,7 @@
                         min="0"
                         placeholder="0"
                       />
+                      <span class="error" id="error-side">Ingrese un valor mayor a 0</span>
                     </div>                
     
                     <button type="submit" class="btn" id="calcS">Calcular</button>
@@ -145,6 +165,7 @@
                         min="0"
                         placeholder="0"
                       />
+                      <span class="error" id="error-radius">Ingrese un valor mayor a 0</span>
                     </div>
                     
     
@@ -154,7 +175,7 @@
                 </div>
               </div> 
 
-              <!-- Triangle isosceles -->
+              <!-- Triangle -->
             <div class="card card-inputs">
                 <div class="result-container">
                   <div>
@@ -165,7 +186,6 @@
                     />
                   </div>
                   <div class="result-container-text">
-                    <!-- <span class="card-text">Resultado:</span> -->
                     <div class="result-text card-text">
                       <span>Perímetro:</span>
                       <strong id="perimeterTi-result"></strong>
@@ -193,7 +213,7 @@
                         min="0"
                         placeholder="0"
                       />
-                      <span class="error" id="error-baseTi">Ingrese un valor válido</span>
+                      <span class="error" id="error-baseTi">Ingrese un valor mayor a 0</span>
                     </div>
 
                     <div class="input-container">
@@ -208,7 +228,7 @@
                           min="0"
                           placeholder="0"
                         />
-                        <span class="error" id="error-sideATi">Ingrese un valor válido</span>
+                        <span class="error" id="error-sideATi">Ingrese un valor mayor a 0</span>
                       </div>
 
                       <div class="input-container">
@@ -223,7 +243,7 @@
                           min="0"
                           placeholder="0"
                         />
-                        <span class="error" id="error-sideBTi">Ingrese un valor válido</span>
+                        <span class="error" id="error-sideBTi">Ingrese un valor mayor a 0</span>
                       </div>
 
                     <div class="input-container">
@@ -238,7 +258,7 @@
                         min="0"
                         placeholder="0"
                       />
-                        <span class="error" id="error-heightTi">Ingrese un valor válido</span>
+                        <span class="error" id="error-heightTi">Ingrese un valor mayor a 0</span>
                     </div>
     
                     <button type="submit" class="btn" id="calcT">Calcular</button>
@@ -246,159 +266,7 @@
                   </form>
                 </div>
               </div>
-
-                <!-- Triangle equilateral 
-              <div class="card card-inputs">
-                <div class="result-container">
-                  <div>
-                    <img
-                      src= 'src/img/equilater.png'
-                      alt="triangle equilateral"
-                      class="img card-img"
-                    />
-                  </div>
-                  <div class="result-container-text">
-                    <span class="card-text">Resultado:</span> 
-                    <div class="result-text card-text">
-                      <span>Perímetro:</span>
-                      <strong id="perimeterTe-result"></strong>
-                      <br />
-                      <span>Área:</span>
-                      <strong id="areaTe-result"></strong>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-contain">
-                  <h2 class="card-title">Triángulo Equilátero</h2>
-    
-                  <form class="form" id="trianglesE">
-                    
-                    
-                    
-                    <div class="input-container">
-                        <label class="label" for="baseTe"
-                          >Ingresa <strong>Uno de sus lados</strong> en cm:</label
-                        >
-                        <input
-                          name="baseTe"
-                          id="baseTe"
-                          class="input"
-                          type="number"
-                          min="0"
-                          placeholder="0"
-                        />
-                      </div>
-                      
-                    <div class="input-container">
-                      <label class="label" for="heightTe"
-                        >Ingresa <strong>Altura</strong> en cm:</label
-                      >
-                      <input
-                        name="heightTe"
-                        id="heightTe"
-                        class="input"
-                        type="number"
-                        min="0"
-                        placeholder="0"
-                      />
-                    </div>
-    
-                    <button type="submit" class="btn" id="calcTe">Calcular</button>
-                    <button type="button" class="btn btn-delete" id="deleteTe">Borrar</button>
-                  </form>
-                </div>
-              </div> -->
-
-               <!-- Triangle escaleno 
-               <div class="card card-inputs">
-                <div class="result-container">
-                  <div>
-                    <img
-                      src= 'src/img/escaleno.png'
-                      alt="triangle escaleno"
-                      class="img card-img"
-                    />
-                  </div>
-                  <div class="result-container-text">
-                    <div class="result-text card-text">
-                      <span>Perímetro:</span>
-                      <strong id="perimeterTe-result"></strong>
-                      <br />
-                      <span>Área:</span>
-                      <strong id="areaTe-result"></strong>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-contain">
-                  <h2 class="card-title">Triángulo Escaleno</h2>
-    
-                  <form class="form" id="trianglesEs">
-                    
-                    
-                    
-                    <div class="input-container">
-                        <label class="label" for="sideATes"
-                          >Ingresa <strong>Lado A</strong> en cm:</label
-                        >
-                        <input
-                          name="sideATes"
-                          id="sideATes"
-                          class="input"
-                          type="number"
-                          min="0"
-                          placeholder="0"
-                        />
-                      </div>
-
-                      <div class="input-container">
-                        <label class="label" for="sideBTes"
-                          >Ingresa <strong>LadoB</strong> en cm:</label
-                        >
-                        <input
-                          name="sideBTes"
-                          id="sideBTes"
-                          class="input"
-                          type="number"
-                          min="0"
-                          placeholder="0"
-                        />
-                      </div>
-
-                      <div class="input-container">
-                        <label class="label" for="sideCTes"
-                          >Ingresa <strong>Lado C</strong> en cm:</label
-                        >
-                        <input
-                          name="sideCTes"
-                          id="sideCTes"
-                          class="input"
-                          type="number"
-                          min="0"
-                          placeholder="0"
-                        />
-                      </div>
-                      
-                    <div class="input-container">
-                      <label class="label" for="heightTes"
-                        >Ingresa <strong>Altura</strong> en cm:</label
-                      >
-                      <input
-                        name="heightTes"
-                        id="heightTes"
-                        class="input"
-                        type="number"
-                        min="0"
-                        placeholder="0"
-                      />
-                    </div>
-    
-                    <button type="submit" class="btn" id="calcTes">Calcular</button>
-                    <button type="button" class="btn btn-delete" id="deleteTes">Borrar</button>
-                  </form>
-                </div>
-              </div>
-            -->
-              
+               
             <!-- Rectangle -->
             <div class="card card-inputs">
                 <div class="result-container">
@@ -410,7 +278,6 @@
                     />
                   </div>
                   <div class="result-container-text">
-                    <!-- <span class="card-text">Resultado:</span> -->
                     <div class="result-text">
                       <span class="card-text">Perímetro:</span>
                       <strong class="card-text" id="rectanglePerimeter-result"></strong>
@@ -436,7 +303,7 @@
                         min="0"
                         placeholder="0"
                       />
-                      <span class="error" id="error-sideA">Ingrese un valor válido</span>
+                      <span class="error" id="error-sideA">Ingrese un valor mayor a 0</span>
                     </div>
                     <div class="input-container">
                       <label class="label"
@@ -450,7 +317,7 @@
                         min="0"
                         placeholder="0"
                       />
-                        <span class="error" id="error-sideB">Ingrese un valor válido</span>
+                        <span class="error" id="error-sideB">Ingrese un valor mayor a 0</span>
                     </div>                
     
                     <button type="submit" class="btn" id="calcR">Calcular</button>
